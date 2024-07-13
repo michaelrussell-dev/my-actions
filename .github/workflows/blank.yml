@@ -2,15 +2,15 @@ name: QA Workflow
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [workflow_dispatch]
 env:
-  SF_USER: sfuser
+  SF_USER_ENV: sfuser_env
 jobs:
   Deploy-QA-Branch-To-UAT:
     runs-on: ubuntu-latest
     steps:
       - name: SF User 1 var
         run: echo "$SF_USER"
-      - name: SF User
-        run: echo $SF_USER
+      - name: SF User ENV
+        run: echo $SF_USER_ENV
       - name: Checkout Branch
         uses: actions/checkout@v4
       - name: Setup Node
