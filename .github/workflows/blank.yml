@@ -1,10 +1,14 @@
 name: QA UAT Deployment
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [workflow_dispatch]
+env:
+  SF_USER: sfuser
 jobs:
   Deploy-QA-Branch-To-UAT:
     runs-on: ubuntu-latest
     steps:
+      - name: SF User
+        run: echo $SF_USER
       - name: Checkout Branch
         uses: actions/checkout@v4
       - name: Setup Node
