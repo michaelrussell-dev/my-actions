@@ -1,4 +1,4 @@
-name: Deploy-QA-To-UAT
+name: Deploy QA to UAT
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [workflow_dispatch]
 jobs:
